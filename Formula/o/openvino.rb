@@ -1,9 +1,12 @@
 class Openvino < Formula
+  include Language::Python::Virtualenv
+
   desc "Open Visual Inference And Optimization toolkit for AI inference"
   homepage "https://docs.openvino.ai"
   url "https://github.com/openvinotoolkit/openvino/archive/refs/tags/2024.2.0.tar.gz"
   sha256 "b624481efb7814cf2d98a29163c3b914fa2f23c1417289b13561d0b5e32fc67c"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/openvinotoolkit/openvino.git", branch: "master"
 
   livecheck do
@@ -12,13 +15,13 @@ class Openvino < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "5a7b9f9d82b909f5fb3f7cdb706b4d2815f2ea2825c8c3e1a1211547bcb6a734"
-    sha256 cellar: :any,                 arm64_ventura:  "cc54c82fd07e995e939ebd657d407005bb7e4c027233f675d2de418127603aab"
-    sha256 cellar: :any,                 arm64_monterey: "a3569f9e6dba9f34d330805fcdea945ba06da240d918c82556c9bf67187ca6ac"
-    sha256 cellar: :any,                 sonoma:         "daec83be26bdc5e3e4776da1854602c419cc54a351860d1e9e8b6c2c0ccebb2c"
-    sha256 cellar: :any,                 ventura:        "61baddf9e47f14d2d00a3112ddf3250cd171fd5243e6612dc7dffe758fb2bd30"
-    sha256 cellar: :any,                 monterey:       "b1a45cf4dbffa48b75b82e9ac462289839b512c88c16319f88a00e34f2780a69"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69c79995d1be93f8819f014585822dfcf221fd31052052134958cbee7cbe8c02"
+    sha256 cellar: :any,                 arm64_sonoma:   "760e909234abb37171c247b0712c701fb34c55f8dc583ffa32e42e5f9e6130f6"
+    sha256 cellar: :any,                 arm64_ventura:  "9e6598733dca8bd377c5e08798a5b83dec7b12b562b0bcdf8c20ee8882675b09"
+    sha256 cellar: :any,                 arm64_monterey: "9d7ddfefae3ec268577c3b75385b58b202c0f5eb3cdd2f65c8dfa5ff714b3a07"
+    sha256 cellar: :any,                 sonoma:         "ae313d33cebda7f787905cf2cba8a09aad7c281ed8284abf9e0dafeea5da274c"
+    sha256 cellar: :any,                 ventura:        "cc022fa148c518bbe1e9beea80e17caa1d316f1001d3f3a1acb7a2680f677ea8"
+    sha256 cellar: :any,                 monterey:       "79157480d03b305ba54aec1fac3e2ae25c59218f0c3b99505a95cb112f98fedb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d4025a4444fa4a13ff2191a59e7b92ca80fb183a9e3b62e5dbd96024657dba9"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -30,7 +33,6 @@ class Openvino < Formula
   depends_on "python@3.12" => [:build, :test]
   depends_on "numpy"
   depends_on "pugixml"
-  depends_on "python-packaging"
   depends_on "snappy"
   depends_on "tbb"
 
@@ -72,6 +74,16 @@ class Openvino < Formula
   resource "onnx" do
     url "https://github.com/onnx/onnx/archive/refs/tags/v1.15.0.tar.gz"
     sha256 "c757132e018dd0dd171499ef74fca88b74c5430a20781ec53da19eb7f937ef68"
+  end
+
+  resource "openvino-telemetry" do
+    url "https://files.pythonhosted.org/packages/37/dd/675a6349e4b5a1d5bfaab940cd52a70c988099b6f4c1689af1884c49815a/openvino-telemetry-2023.2.1.tar.gz"
+    sha256 "ca2106b84671c6edfdc562c03b1c6dd3434d649a4c2174aa47f4628aa66e660a"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
+    sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
   end
 
   def python3
@@ -133,7 +145,10 @@ class Openvino < Formula
     ENV["PYTHON_EXTENSIONS_ONLY"] = "1"
     ENV["CPACK_GENERATOR"] = "BREW"
 
-    system python3, "-m", "pip", "install", *std_pip_args, "./src/bindings/python/wheel"
+    venv = virtualenv_create(libexec, python3)
+    venv.pip_install resources.select { |r| r.url.start_with?("https://files.pythonhosted.org/") }
+    venv.pip_install_and_link "./src/bindings/python/wheel"
+    (prefix/Language::Python.site_packages(python3)/"homebrew-openvino.pth").write venv.site_packages
   end
 
   test do

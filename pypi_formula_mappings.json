@@ -746,13 +746,15 @@
     "extra_packages": ["numpydoc"]
   },
   "ssh-mitm": {
-    "exclude_packages": ["cryptography"],
-    "extra_packages": ["setuptools"]
+    "exclude_packages": ["cryptography"]
   },
   "sslyze": {
     "exclude_packages": ["typing-extensions", "pycparser"]
   },
   "streamlink": {
+    "exclude_packages": ["certifi"]
+  },
+  "subliminal": {
     "exclude_packages": ["certifi"]
   },
   "svtplay-dl": {
@@ -794,7 +796,7 @@
     "exclude_packages": ["certifi"]
   },
   "twine": {
-    "exclude_packages": ["certifi"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "unoconv":{
     "extra_packages": ["setuptools"]
