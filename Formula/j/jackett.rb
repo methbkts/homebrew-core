@@ -1,19 +1,19 @@
 class Jackett < Formula
   desc "API Support for your favorite torrent trackers"
   homepage "https://github.com/Jackett/Jackett"
-  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.22.306.tar.gz"
-  sha256 "679b798309c26f167c1b74acbdc8c733e702eb9d38252f042f7a20a5873a6cbd"
+  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.22.427.tar.gz"
+  sha256 "abe5137b02bb6619aa332027e0b7d9e768e225b157c4a5f2e387df7c7011d67b"
   license "GPL-2.0-only"
   head "https://github.com/Jackett/Jackett.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "cb6998dc7ca24b365ed38392a585c61df16633a99717f47f2d7bcbf6613e6347"
-    sha256 cellar: :any,                 arm64_ventura:  "e5c81d9dadacd9b43320c77ba012b0b4f800d3fb27eb857f98cbaf99d83330a6"
-    sha256 cellar: :any,                 arm64_monterey: "e2055cdcc1f56a53bc616314376f3bf5f8e7812c15fe18634208934e01d364e0"
-    sha256 cellar: :any,                 sonoma:         "4a70511607d8cd1f96afd0e5920b098cdefe72f676418b449b724ee9713575c0"
-    sha256 cellar: :any,                 ventura:        "df656af6e54a4f2315824825894c768c547d9673574b65ec5aba15c43be0b7b5"
-    sha256 cellar: :any,                 monterey:       "839858dfaaee5d3bc691c024359a0b7a636868929f033600623c0ca6e23e6798"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "761b035ee81cba85fdc37915859f0231207ff93cb004735ab0f409ae86b25db1"
+    sha256 cellar: :any,                 arm64_sonoma:   "561f8c7fa230c0e9b6b484dd68b509bc53f61addb7ac05a298b0bf6892452215"
+    sha256 cellar: :any,                 arm64_ventura:  "b69f8e2939f74dd404efb65a56960452910b61d701c83ae4cfda1dac856b87cd"
+    sha256 cellar: :any,                 arm64_monterey: "97cd4c0e6170aede1dfd8bd53a1509f7bc27cdcceaa84598b3b370270779c48d"
+    sha256 cellar: :any,                 sonoma:         "f34bba4e0c1cc2c96a828da1c48d451d9ce939631acc847a14e786cf23290735"
+    sha256 cellar: :any,                 ventura:        "1b05f08e1688f834bc17b9ebde83c6855bcfd33f5d16b19983677b12c6da5ecb"
+    sha256 cellar: :any,                 monterey:       "28da30201dc6983584083ac1f6145a6dd6a141994efd032737e88c4c7eb2e1c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c70e94106409d12c80ee1fa55b839c12339a8f9f1a319202f575a392b83ca79a"
   end
 
   depends_on "dotnet"
@@ -59,7 +59,7 @@ class Jackett < Formula
     port = free_port
 
     pid = fork do
-      exec "#{bin}/jackett", "-d", testpath, "-p", port.to_s
+      exec bin/"jackett", "-d", testpath, "-p", port.to_s
     end
 
     begin
