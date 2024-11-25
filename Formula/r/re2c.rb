@@ -1,21 +1,17 @@
 class Re2c < Formula
   desc "Generate C-based recognizers from regular expressions"
   homepage "https://re2c.org"
-  url "https://github.com/skvadrik/re2c/releases/download/3.1/re2c-3.1.tar.xz"
-  sha256 "0ac299ad359e3f512b06a99397d025cfff81d3be34464ded0656f8a96676c029"
+  url "https://github.com/skvadrik/re2c/releases/download/4.0.1/re2c-4.0.1.tar.xz"
+  sha256 "7c35d54fdf2c4b5981b80362d1c742aec4d011589673e02f2e9566f7e66c44af"
   license :public_domain
 
   bottle do
-    sha256 arm64_sequoia:  "19a523f3c74c860dfc8ea3c600c60fdcd29e83f5ad21825ffa88b13401283d76"
-    sha256 arm64_sonoma:   "b5197fcd4db8b6811e9a72bca29fc08e35d0b0581bc1fa390d17f702fa9af87d"
-    sha256 arm64_ventura:  "c213025ac8f67d67c7de7b42b18f02423b9b969f95d01217b0eb082e18e42d02"
-    sha256 arm64_monterey: "1132b82eada9b28d6ae914619f6471603986c51490c8bd5c75f64e4a17af7393"
-    sha256 arm64_big_sur:  "95c681abedf2a1fa92e68003a76eeb31ecde2d3816a6bb3d01372194a3a86346"
-    sha256 sonoma:         "639a90433de77050197aa58c0428986893af29728d905c05718f57f37ce36c27"
-    sha256 ventura:        "9d8ed384c1173e7ee72aae6ebc11b2556a501932c33c7c0558f534c1854ce5ac"
-    sha256 monterey:       "b6ad0a47af09087b366226d20e9538260e56a80b70bb118bdaf472e82bad1af4"
-    sha256 big_sur:        "343c4174f501aaeea7c339fef350d36bd26faffd130d1f07fd778239375fc826"
-    sha256 x86_64_linux:   "a30c3862ed53d4e5465ae66cc177253f717a4f611fe5a7533391bd6ca4d0cd72"
+    sha256 arm64_sequoia: "02b660296dc2fed9c6d9a997367f264d0a50a4a9d21e15eeecc90238cb8af449"
+    sha256 arm64_sonoma:  "8b70f0099883134ec333605e746fa6ef071e9f2d19c57dd6884f96b0ef325b73"
+    sha256 arm64_ventura: "24bd685ae9895daf335900db645bbc513cc0b087676594c252eea22a52c73c31"
+    sha256 sonoma:        "2a4ef603ced537c272a3eca2e3aacd76ef4059d0c48aca39bab361026d8c2303"
+    sha256 ventura:       "c0019d00313d2ada49ced6bc401cd3aea4462787526afc0a004469277ea8170b"
+    sha256 x86_64_linux:  "a72be4263f98de8a6b54197fc8980129832222cb1da32a22a81e28bb0426fe26"
   end
 
   uses_from_macos "python" => :build
