@@ -1,8 +1,8 @@
 class Mise < Formula
   desc "Polyglot runtime manager (asdf rust clone)"
   homepage "https://mise.jdx.dev/"
-  url "https://github.com/jdx/mise/archive/refs/tags/v2024.11.30.tar.gz"
-  sha256 "eb9827c6db7741e86a2a398dd6bc7e144920b81169ee5f6b4025138316dbbdb1"
+  url "https://github.com/jdx/mise/archive/refs/tags/v2024.11.37.tar.gz"
+  sha256 "fded755551f9cd31ad9ea1287ff395b2d0700436ee35cf4240a3447c74647214"
   license "MIT"
   head "https://github.com/jdx/mise.git", branch: "main"
 
@@ -12,12 +12,12 @@ class Mise < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "dbfc6959a4adc02774357a9a1067be3b7ee918b13477a952511fffff301f3595"
-    sha256 cellar: :any,                 arm64_sonoma:  "29618a8e2b6216564bc615eda9f4e25b7851ad63db450f306324fc1edd50bc7f"
-    sha256 cellar: :any,                 arm64_ventura: "39a1f0c35776fe1c5007f6c6d655bda5e10191d31b629d5099f7b1e47d63f88d"
-    sha256 cellar: :any,                 sonoma:        "c43454d9b66ba9361e0c962f9dd1979b9334b4e3e1b0ccae0e9ca59a50b61a45"
-    sha256 cellar: :any,                 ventura:       "8fb5b47afd08614139c1ce59554bfb275d038cd645a6b70a38d015cef9eeddd4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f4646f55df2ebd566f07d8273007737e757f9dbab102ca3da68d0118f4e408c9"
+    sha256 cellar: :any,                 arm64_sequoia: "073efd42f615f276d1f73cb0e3dc0027540adcd67ecf6ffea7875f9dd30a15df"
+    sha256 cellar: :any,                 arm64_sonoma:  "ea1343374abfb2c7af4a362b79da83f24dcaa5081092f6897f8c3bb14d41be37"
+    sha256 cellar: :any,                 arm64_ventura: "2ffe51f935664e2ff54155ebb9ab2deaa96c1fd168bcca06e1eb200be8e0e1b3"
+    sha256 cellar: :any,                 sonoma:        "d44d8e5faf36463ad340e1784a21b0d277fd736359e05318dca44856a1d2b79a"
+    sha256 cellar: :any,                 ventura:       "2a51bad3ef17cdd2abfb76cd865f42f8524b84fb8326923a3572eaa6128e704d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd71368c7f57f3bc269090cbcff48ff4836e9cf0223ba25955b1b3a8d2992e9e"
   end
 
   depends_on "pkgconf" => :build
@@ -68,8 +68,8 @@ class Mise < Formula
 
   test do
     system bin/"mise", "settings", "set", "experimental", "true"
-    system bin/"mise", "use", "node@22"
-    assert_match "22", shell_output("#{bin}/mise exec -- node -v")
+    system bin/"mise", "use", "go@1.23"
+    assert_match "1.23", shell_output("#{bin}/mise exec -- go version")
 
     [
       Formula["libgit2"].opt_lib/shared_library("libgit2"),

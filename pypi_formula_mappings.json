@@ -207,6 +207,9 @@
   "cloudsplaining": {
     "exclude_packages": ["certifi"]
   },
+  "cobo-cli": {
+    "exclude_packages": ["certifi"]
+  },
   "codelimit": {
     "exclude_packages": ["certifi"]
   },
@@ -224,6 +227,10 @@
   },
   "cookiecutter": {
     "exclude_packages": ["certifi"]
+  },
+  "core-lightning": {
+    "package_name": "",
+    "extra_packages": ["mako", "setuptools"]
   },
   "credstash": {
     "exclude_packages": ["cryptography"]
@@ -318,7 +325,7 @@
   },
   "fdroidserver": {
     "exclude_packages": ["certifi", "cryptography", "numpy", "pillow"],
-    "extra_packages": ["androguard==3.3.5", "setuptools"]
+    "extra_packages": ["androguard<4"]
   },
   "flintrock": {
     "exclude_packages": ["cryptography"]
@@ -781,7 +788,7 @@
     "extra_packages": ["pysigma-backend-sqlite"]
   },
   "sigstore": {
-    "exclude_packages": ["certifi", "cryptography"]
+    "exclude_packages": ["certifi"]
   },
   "slither-analyzer": {
     "exclude_packages": ["certifi"]
