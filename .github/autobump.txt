@@ -33,10 +33,12 @@ akamai
 alda
 alembic
 algol68g
+aliae
 aliddns
 aliyun-cli
 aliyunpan
 all-repos
+allegro
 allure
 alluxio
 alp
@@ -113,6 +115,7 @@ asciidoctorj
 asdf
 asio
 ask-cli
+asm6809
 asn
 asnmap
 aspell
@@ -128,6 +131,7 @@ asymptote
 asyncapi
 asyncplusplus
 at-spi2-core
+atf
 atlantis
 atlas
 atomicparsley
@@ -148,7 +152,19 @@ avrdude
 awk
 aws-amplify
 aws-auth
+aws-c-auth
+aws-c-cal
+aws-c-common
+aws-c-compression
+aws-c-event-stream
+aws-c-http
+aws-c-io
+aws-c-mqtt
+aws-c-s3
+aws-c-sdkutils
 aws-cdk
+aws-checksums
+aws-crt-cpp
 aws-elasticbeanstalk
 aws-es-proxy
 aws-iam-authenticator
@@ -165,6 +181,7 @@ awsdac
 awslogs
 axel
 azcopy
+azure-core-cpp
 b2-tools
 babel
 babl
@@ -308,6 +325,7 @@ c3c
 c4core
 c7n
 ca-certificates
+cadaver
 caddy
 cadence
 cadence-workflow
@@ -331,6 +349,7 @@ cargo-binstall
 cargo-bloat
 cargo-bundle
 cargo-c
+cargo-chef
 cargo-crev
 cargo-deny
 cargo-depgraph
@@ -449,6 +468,7 @@ cli11
 cli53
 clib
 clickhouse-cpp
+clickhouse-sql-parser
 cliclick
 clifm
 cling
@@ -470,6 +490,7 @@ cloudformation-guard
 cloudfox
 cloudlist
 cloudprober
+cloudquery
 clozure-cl
 clp
 clusterawsadm
@@ -486,6 +507,7 @@ cnats
 cntb
 coal
 cobalt
+cobo-cli
 coccinelle
 cocoapods
 cocogitto
@@ -546,6 +568,7 @@ cpi
 cpm
 cpp-gsl
 cpp-httplib
+cpp-peglib
 cppad
 cppcheck
 cppinsights
@@ -667,6 +690,7 @@ diffstat
 difftastic
 digdag
 dillo
+directx-headers
 direnv
 direvent
 dislocker
@@ -746,9 +770,11 @@ dua-cli
 dub
 duck
 duckdb
+ducker
 duckscript
 dufs
 dug
+dum
 dumpling
 dunamai
 dune
@@ -757,6 +783,7 @@ duplicity
 duply
 dust
 dvc
+dwarfs
 dwarfutils
 dwm
 dxpy
@@ -986,6 +1013,7 @@ fuc
 fuego-firestore
 func-e
 functionalplus
+funzzy
 fuse-overlayfs
 fuseki
 futhark
@@ -1080,6 +1108,7 @@ gitql
 gitsign
 gittuf
 gitu
+giza
 gjs
 glances
 glassfish
@@ -1175,6 +1204,7 @@ gradle
 gradle-completion
 gradle-profiler
 grafana
+grafana-agent
 grails
 grap
 graph-tool
@@ -1206,6 +1236,7 @@ gspell
 gstreamer
 gtk+3
 gtk-gnutella
+gtk-mac-integration
 gtk4
 gtkmm4
 gtksourceview5
@@ -1314,6 +1345,7 @@ imapsync
 imath
 imessage-exporter
 imgdiet
+imgp
 imgproxy
 immich-cli
 immortal
@@ -1573,6 +1605,7 @@ libbpf
 libbsd
 libcap
 libcap-ng
+libcdr
 libchewing
 libclc
 libcoap
@@ -1705,6 +1738,7 @@ libtrng
 libucl
 libultrahdr
 libunibreak
+libunicode
 libuninameslist
 libunistring
 libunwind
@@ -1761,6 +1795,7 @@ litmusctl
 little-cms2
 livekit
 livekit-cli
+lla
 llama.cpp
 llgo
 llm
@@ -1790,10 +1825,12 @@ lucky-commit
 luit
 lune
 lunzip
+lutok
 luv
 lux
 lwtools
 lxc
+lxi-tools
 lychee
 lynis
 lz4
@@ -1860,9 +1897,11 @@ medusa
 megatools
 meilisearch
 melange
+meli
 melody
 memcached
 memray
+memtester
 menhir
 mercurial
 mergiraf
@@ -1892,6 +1931,7 @@ minigraph
 minijinja-cli
 minikube
 minimal-racket
+minio-warp
 minipro
 miniserve
 miniupnpc
@@ -1910,6 +1950,7 @@ mlpack
 mlt
 mlx
 mmark
+mmseqs2
 mmv
 mockery
 mockolo
@@ -2055,6 +2096,7 @@ nox
 npm-check-updates
 npth
 nq
+nrm
 nrpe
 ns-3
 nsd
@@ -2295,6 +2337,7 @@ pivit
 pixi
 pixie
 pixman
+pkg-config-wrapper
 pkgconf
 pkl
 plantuml
@@ -2331,6 +2374,7 @@ postgresql@13
 postgresql@14
 postgresql@15
 postgresql@16
+postgresql@17
 postgrest
 poutine
 powerline-go
@@ -2409,6 +2453,7 @@ pyqt-builder
 pyright
 pyside
 pyside@2
+pytest
 python-argcomplete
 python-build
 python-launcher
@@ -2420,6 +2465,7 @@ python-yq
 pythran
 pyupgrade
 qbe
+qbittorrent-cli
 qbs
 qca
 qcachegrind
@@ -2520,6 +2566,7 @@ robin-map
 roblox-ts
 robot-framework
 rocksdb
+rogcat
 rojo
 rollup
 ronn-ng
@@ -2536,6 +2583,7 @@ rpmspectool
 rqlite
 rrdtool
 rsgain
+rshijack
 rswift
 rsyncy
 rsyslog
@@ -2869,6 +2917,7 @@ tektoncd-cli
 teku
 telegraf
 teleport
+television
 teller
 telnet
 telnetd
