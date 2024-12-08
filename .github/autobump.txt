@@ -516,7 +516,6 @@ code-cli
 code-minimap
 code-server
 codec2
-codecov-cli
 codelimit
 coder
 codespell
@@ -1253,6 +1252,7 @@ gwyddion
 gxml
 gyb
 h26forge
+h3
 hackrf
 hadoop
 halide
@@ -2151,6 +2151,7 @@ okta-awscli
 okteto
 ol
 ollama
+omake
 omega
 omniorb
 onednn
@@ -2371,6 +2372,7 @@ ponyc
 popeye
 portablegl
 porter
+poselib
 postgis
 postgresql@13
 postgresql@14
@@ -2515,7 +2517,6 @@ rav1e
 raven
 raxml-ng
 raylib
-rbtools
 rbw
 rclone
 rcs
@@ -2655,6 +2656,7 @@ scotch
 scrapy
 scrcpy
 screen
+screenfetch
 scriptisto
 scs
 scummvm
@@ -2722,6 +2724,7 @@ sip
 sipp
 siril
 sispmctl
+six
 sjk
 sk
 skaffold
@@ -3044,6 +3047,7 @@ typescript-language-server
 typewritten
 typical
 typos-cli
+typos-lsp
 typst
 typstyle
 tz
@@ -3179,6 +3183,7 @@ wazero
 wcslib
 wcurl
 weasyprint
+weaviate-cli
 web-ext
 webdis
 webhook
@@ -3298,6 +3303,7 @@ zellij
 zenith
 zenity
 zeromq
+zet
 zf
 zfind
 zig
