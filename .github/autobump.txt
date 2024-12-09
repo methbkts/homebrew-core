@@ -18,6 +18,7 @@ adwaita-icon-theme
 aerleon
 aespipe
 afflib
+afl++
 aftman
 agda
 age
@@ -72,6 +73,7 @@ apache-flink
 apache-flink-cdc
 apache-geode
 apache-opennlp
+apache-pulsar
 apache-spark
 apachetop
 apibuilder-cli
@@ -342,6 +344,7 @@ camlp5
 canfigger
 capnp
 capstone
+carapace
 cargo-about
 cargo-audit
 cargo-auditable
@@ -516,7 +519,6 @@ code-cli
 code-minimap
 code-server
 codec2
-codecov-cli
 codelimit
 coder
 codespell
@@ -1022,6 +1024,7 @@ fwup
 fwupd
 fx
 fzf
+fzf-make
 g-ls
 gabo
 gallery-dl
@@ -1253,6 +1256,7 @@ gwyddion
 gxml
 gyb
 h26forge
+h3
 hackrf
 hadoop
 halide
@@ -1636,6 +1640,7 @@ libfs
 libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
+libgedit-tepl
 libgeotiff
 libgetdata
 libgit2
@@ -1672,6 +1677,7 @@ libmicrohttpd
 libmobi
 libmodbus
 libmonome
+libmsquic
 libmtp
 libmxml
 libnetfilter_conntrack
@@ -1872,6 +1878,7 @@ marked
 marksman
 marp-cli
 massdriver
+massren
 matplotplusplus
 matterbridge
 maturin
@@ -1911,6 +1918,7 @@ metabase
 metals
 metricbeat
 mfem
+mgba
 micro
 micromamba
 micronaut
@@ -2151,6 +2159,7 @@ okta-awscli
 okteto
 ol
 ollama
+omake
 omega
 omniorb
 onednn
@@ -2371,6 +2380,7 @@ ponyc
 popeye
 portablegl
 porter
+poselib
 postgis
 postgresql@13
 postgresql@14
@@ -2515,7 +2525,6 @@ rav1e
 raven
 raxml-ng
 raylib
-rbtools
 rbw
 rclone
 rcs
@@ -2655,6 +2664,7 @@ scotch
 scrapy
 scrcpy
 screen
+screenfetch
 scriptisto
 scs
 scummvm
@@ -2673,6 +2683,7 @@ selenium-server
 semgrep
 sentencepiece
 seqkit
+sequin
 sequoia-sq
 ser2net
 serialosc
@@ -2722,6 +2733,7 @@ sip
 sipp
 siril
 sispmctl
+six
 sjk
 sk
 skaffold
@@ -3044,6 +3056,7 @@ typescript-language-server
 typewritten
 typical
 typos-cli
+typos-lsp
 typst
 typstyle
 tz
@@ -3117,6 +3130,7 @@ vfox
 vgmstream
 vgrep
 vhs
+victorialogs
 victoriametrics
 viddy
 video-compare
@@ -3179,6 +3193,8 @@ wazero
 wcslib
 wcurl
 weasyprint
+weaviate
+weaviate-cli
 web-ext
 webdis
 webhook
@@ -3298,6 +3314,7 @@ zellij
 zenith
 zenity
 zeromq
+zet
 zf
 zfind
 zig
