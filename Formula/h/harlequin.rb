@@ -6,23 +6,24 @@ class Harlequin < Formula
   url "https://files.pythonhosted.org/packages/bb/c1/0fc47822534938e73f070eb485059be414bb6ee274ac05e1d5d695fb4c24/harlequin-1.25.2.tar.gz"
   sha256 "8319da69b07afd063e1296ebba1569374daa171489b97bd35d2dbdae802e6144"
   license "MIT"
-  revision 1
+  revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "14e426a0f2b72b6ba09716c08135471f973bf9f821b4f6842f305a3fb291c394"
-    sha256 cellar: :any,                 arm64_sonoma:  "027127834e8bdfe88707d2d389f35d20b733a76c0f25f102bfb75a1b91a76834"
-    sha256 cellar: :any,                 arm64_ventura: "43eac7d923cf9d8e9e07f48267902848601f50850530689958580eda6fabe902"
-    sha256 cellar: :any,                 sonoma:        "bf59dabcc40c4cd6fa31017b5fb8e4c35bb477f6a29fd09e2b8ba308187b67ef"
-    sha256 cellar: :any,                 ventura:       "1e8395e2404d53835bfc2e77820ab751c0fe9ab0abfb62b0904cd9f66a3fa45b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7cd455b499a8104ed9539f9562f6b810411937e36fc415f240cc4c6e3d57bc45"
+    sha256 cellar: :any,                 arm64_sequoia: "d327c5e1013345211e3a894fc2d10bdf46dca614f83e0ebebc9258a01089a1de"
+    sha256 cellar: :any,                 arm64_sonoma:  "d65c283f803a1bf8fbe99cd17c740aca004272abe402f61f449beb5fb349d7e6"
+    sha256 cellar: :any,                 arm64_ventura: "020cbd6e8a07305909b652e7ab7341b3e4c60ff9a0c4594df626e7ae5e206694"
+    sha256 cellar: :any,                 sonoma:        "e0cef61d30667fe5292ccea4842dc71d5b5f5bc1ee0ed104d4a5adb021407e81"
+    sha256 cellar: :any,                 ventura:       "956cb46e3412663c5c8052b9e4cc8e415c95ab58137854a28e132da014bb76ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e0dc40172e61510046526d73ed86362915af6057330103c286a93126626058c"
   end
 
   depends_on "cmake" => :build
   depends_on "mysql" => :build # mysql-connector-python
   depends_on "ninja" => :build
   depends_on "apache-arrow"
+  depends_on "libpq" # psycopg
   depends_on "python@3.11"
+  depends_on "unixodbc" # harlequin-odbc
 
   on_linux do
     depends_on "patchelf" => :build # for pyarrow
@@ -51,6 +52,16 @@ class Harlequin < Formula
   resource "harlequin-mysql" do
     url "https://files.pythonhosted.org/packages/80/fd/410c3a6f6c1d0358359c58a3c36b0ac3519a1da8d0e7f0424f1a00f8bfcc/harlequin_mysql-0.3.0.tar.gz"
     sha256 "46ef42c5b658568f5340ee53c241cb1333f3e04914807c1f83741e83517878b3"
+  end
+
+  resource "harlequin-odbc" do
+    url "https://files.pythonhosted.org/packages/d6/40/7757a6aaf4a9925bc3d55c332f6914501d5a7ef239dbbb3592a0bed2c733/harlequin_odbc-0.1.1.tar.gz"
+    sha256 "beb2b57836ccdb21b4fa4b151e2cd6fc1b946f4f914eb233de5debc2c08920cf"
+  end
+
+  resource "harlequin-postgres" do
+    url "https://files.pythonhosted.org/packages/71/5f/2015e5d09c34234f4a764df6083405be045f99ea9bf196473d68d3338058/harlequin_postgres-0.4.0.tar.gz"
+    sha256 "d72f12df3e994edf8f660ef9681fdb2a710f740b6a8d9d88ab206d50193c2050"
   end
 
   resource "jinja2" do
@@ -103,6 +114,21 @@ class Harlequin < Formula
     sha256 "3e163f254bef5a03b146397d7c1963bd3e2812f0964bb9a24e6ec761fd28db63"
   end
 
+  resource "psycopg" do
+    url "https://files.pythonhosted.org/packages/d1/ad/7ce016ae63e231575df0498d2395d15f005f05e32d3a2d439038e1bd0851/psycopg-3.2.3.tar.gz"
+    sha256 "a5764f67c27bec8bfac85764d23c534af2c27b893550377e37ce59c12aac47a2"
+  end
+
+  resource "psycopg-c" do
+    url "https://files.pythonhosted.org/packages/53/ba/74caf4eab78d95a173e65cb81507a589365aeafb1d9c84f374002b51dc53/psycopg_c-3.2.3.tar.gz"
+    sha256 "06ae7db8eaec1a3845960fa7f997f4ccdb1a7a7ab8dc593a680bcc74e1359671"
+  end
+
+  resource "psycopg-pool" do
+    url "https://files.pythonhosted.org/packages/49/71/01d4e589dc5fd1f21368b7d2df183ed0e5bbc160ce291d745142b229797b/psycopg_pool-3.2.4.tar.gz"
+    sha256 "61774b5bbf23e8d22bedc7504707135aaf744679f8ef9b3fe29942920746a6ed"
+  end
+
   resource "pyarrow" do
     url "https://files.pythonhosted.org/packages/7f/7b/640785a9062bb00314caa8a387abce547d2a420cf09bd6c715fe659ccffb/pyarrow-18.1.0.tar.gz"
     sha256 "9386d3ca9c145b5539a1cfc75df07757dff870168c959b473a0bccbc3abc8c73"
@@ -111,6 +137,11 @@ class Harlequin < Formula
   resource "pygments" do
     url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
     sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
+  end
+
+  resource "pyodbc" do
+    url "https://files.pythonhosted.org/packages/a0/36/a1ac7d23a1611e7ccd4d27df096f3794e8d1e7faa040260d9d41b6fc3185/pyodbc-5.2.0.tar.gz"
+    sha256 "de8be39809c8ddeeee26a4b876a6463529cd487a60d1393eb2a93e9bcd44a8f5"
   end
 
   resource "pyperclip" do
@@ -194,6 +225,7 @@ class Harlequin < Formula
     venv = virtualenv_install_with_resources without: "mysql-connector-python"
 
     # PyPI sdist is broken (missing at least setup.py)
+    # https://bugs.mysql.com/bug.php?id=113396
     resource("mysql-connector-python").stage do
       venv.pip_install Pathname.pwd/"mysql-connector-python"
     end
