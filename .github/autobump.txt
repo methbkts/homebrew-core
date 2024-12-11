@@ -18,6 +18,7 @@ adwaita-icon-theme
 aerleon
 aespipe
 afflib
+afl++
 aftman
 agda
 age
@@ -72,6 +73,7 @@ apache-flink
 apache-flink-cdc
 apache-geode
 apache-opennlp
+apache-pulsar
 apache-spark
 apachetop
 apibuilder-cli
@@ -342,6 +344,7 @@ camlp5
 canfigger
 capnp
 capstone
+carapace
 cargo-about
 cargo-audit
 cargo-auditable
@@ -386,6 +389,7 @@ cctz
 cdebug
 cdk
 cdk8s
+cdktf
 cdogs-sdl
 cdsclient
 cdxgen
@@ -516,7 +520,6 @@ code-cli
 code-minimap
 code-server
 codec2
-codecov-cli
 codelimit
 coder
 codespell
@@ -737,6 +740,7 @@ dooit
 doppler
 dosbox-staging
 dosbox-x
+dotbot
 dotenv-linter
 dotnet
 dotslash
@@ -1022,6 +1026,7 @@ fwup
 fwupd
 fx
 fzf
+fzf-make
 g-ls
 gabo
 gallery-dl
@@ -1253,6 +1258,7 @@ gwyddion
 gxml
 gyb
 h26forge
+h3
 hackrf
 hadoop
 halide
@@ -1302,6 +1308,7 @@ hopenpgp-tools
 hoverfly
 howard-hinnant-date
 hpack
+hsd
 htmldoc
 htmlq
 htmltest
@@ -1636,6 +1643,7 @@ libfs
 libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
+libgedit-tepl
 libgeotiff
 libgetdata
 libgit2
@@ -1672,6 +1680,7 @@ libmicrohttpd
 libmobi
 libmodbus
 libmonome
+libmsquic
 libmtp
 libmxml
 libnetfilter_conntrack
@@ -1866,12 +1875,14 @@ mariadb@10.5
 mariadb@10.6
 mariadb@11.2
 mariadb@11.4
+markdown-oxide
 markdownlint-cli
 markdownlint-cli2
 marked
 marksman
 marp-cli
 massdriver
+massren
 matplotplusplus
 matterbridge
 maturin
@@ -1911,6 +1922,7 @@ metabase
 metals
 metricbeat
 mfem
+mgba
 micro
 micromamba
 micronaut
@@ -2151,6 +2163,7 @@ okta-awscli
 okteto
 ol
 ollama
+omake
 omega
 omniorb
 onednn
@@ -2371,6 +2384,7 @@ ponyc
 popeye
 portablegl
 porter
+poselib
 postgis
 postgresql@13
 postgresql@14
@@ -2510,12 +2524,12 @@ rancher-cli
 ranger
 rapidfuzz-cpp
 ratchet
+ratfor
 rattler-build
 rav1e
 raven
 raxml-ng
 raylib
-rbtools
 rbw
 rclone
 rcs
@@ -2655,6 +2669,7 @@ scotch
 scrapy
 scrcpy
 screen
+screenfetch
 scriptisto
 scs
 scummvm
@@ -2673,6 +2688,7 @@ selenium-server
 semgrep
 sentencepiece
 seqkit
+sequin
 sequoia-sq
 ser2net
 serialosc
@@ -2722,6 +2738,7 @@ sip
 sipp
 siril
 sispmctl
+six
 sjk
 sk
 skaffold
@@ -2845,6 +2862,7 @@ stow
 stp
 strace
 streamlink
+streamvbyte
 stress-ng
 stripe-cli
 stripe-mock
@@ -2898,6 +2916,7 @@ talisman
 tanka
 taplo
 tarantool
+tarlz
 tartufo
 task
 taskopen
@@ -3044,6 +3063,7 @@ typescript-language-server
 typewritten
 typical
 typos-cli
+typos-lsp
 typst
 typstyle
 tz
@@ -3072,6 +3092,7 @@ urdfdom
 urdfdom_headers
 uriparser
 urlscan
+urlwatch
 usb.ids
 usbredir
 usbutils
@@ -3117,6 +3138,7 @@ vfox
 vgmstream
 vgrep
 vhs
+victorialogs
 victoriametrics
 viddy
 video-compare
@@ -3179,6 +3201,8 @@ wazero
 wcslib
 wcurl
 weasyprint
+weaviate
+weaviate-cli
 web-ext
 webdis
 webhook
@@ -3298,6 +3322,7 @@ zellij
 zenith
 zenity
 zeromq
+zet
 zf
 zfind
 zig
