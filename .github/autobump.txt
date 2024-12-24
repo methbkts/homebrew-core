@@ -1104,6 +1104,7 @@ git-delta
 git-extras
 git-filter-repo
 git-grab
+git-ignore
 git-interactive-rebase-tool
 git-lfs
 git-machete
@@ -1284,6 +1285,7 @@ hackrf
 hadoop
 halide
 halp
+hamlib
 hapi-fhir-cli
 haproxy
 haproxy@2.8
@@ -1344,6 +1346,7 @@ httpyac
 hubble
 huggingface-cli
 hugo
+humanlog
 hut
 hwatch
 hwloc
@@ -2328,6 +2331,7 @@ pango
 pangomm
 papilo
 parallel
+parallel-disk-usage
 parallel-hashmap
 parca
 pari
@@ -2418,6 +2422,7 @@ pkg-config-wrapper
 pkgconf
 pkl
 plantuml
+planus
 platformio
 plow
 pluto
@@ -2918,6 +2923,7 @@ stanc3
 stanford-corenlp
 star
 starlark-rust
+static-web-server
 staticcheck
 statix
 stdman
@@ -3065,6 +3071,7 @@ tfsec
 tfupdate
 tgui
 thanos
+the-way
 theharvester
 thrift
 thriftgo
