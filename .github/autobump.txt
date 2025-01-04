@@ -371,6 +371,7 @@ cargo-instruments
 cargo-llvm-cov
 cargo-llvm-lines
 cargo-make
+cargo-msrv
 cargo-nextest
 cargo-outdated
 cargo-public-api
@@ -1089,6 +1090,7 @@ gexiv2
 gf
 gfold
 ggshield
+gh-ost
 ghcup
 ghex
 ghorg
@@ -3025,6 +3027,7 @@ systemc
 systemd
 t-completion
 ta-lib
+tabiew
 tailscale
 tailspin
 tailwindcss
@@ -3405,6 +3408,7 @@ xlsxio
 xmake
 xmlrpc-c
 xmount
+xmq
 xmrig
 xnvme
 xonsh
