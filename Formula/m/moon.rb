@@ -1,8 +1,8 @@
 class Moon < Formula
   desc "Task runner and repo management tool for the web ecosystem, written in Rust"
   homepage "https://moonrepo.dev/moon"
-  url "https://github.com/moonrepo/moon/archive/refs/tags/v1.31.3.tar.gz"
-  sha256 "1dbaa927103560cf67fc1d052333928ec4cb4c908e111427a4afcd864d734adc"
+  url "https://github.com/moonrepo/moon/archive/refs/tags/v1.32.1.tar.gz"
+  sha256 "cc087bb8a345d1339cf14e74540ed626718dd203af1376217186157810483b2d"
   license "MIT"
   head "https://github.com/moonrepo/moon.git", branch: "master"
 
@@ -12,12 +12,12 @@ class Moon < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "df58c12e71c646abfd792a0dbbb606a51731fe47903392ed4888359323cfbc28"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "547f281efae2f643ffd23daa967ed4333428405d4fdfc802c85adcb53f6cf50c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "84c0a9427470bfe6f13c1608d0e56f49d8b47a9975af239950b357ddbe2ed150"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e2e924d69cb875c4adc21fad8f53965c961ee11cabf023ed37af85f4310b99db"
-    sha256 cellar: :any_skip_relocation, ventura:       "d319409233adaa8132e7e7eba7aa1f3bfedd5ac11e573b3b0903d437391f249d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e8b40bded92091e7d4c4624238c9564fd4691a38a26b586d15fe021ab8644fa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "50b7794429039a7dede650581722cdda7fce205a30f9f84a5d10d73081cbba0d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e8816a3a48bce65046c9cc780e29b83c0c83bd1808e047ee88e23d0bb5902042"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "51a3617b006121e2732193a8c8f48d67ab9c557d90c1f024e35990adac750381"
+    sha256 cellar: :any_skip_relocation, sonoma:        "91275b800169b9841f42f58781085a852ac30f4b86ba6b0eea30a7eafcd0d5bc"
+    sha256 cellar: :any_skip_relocation, ventura:       "423bfac4cbab1132ae9d3e724e3297c8dbfc7b9e810f016af205e9486f2bb5c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e78c3aa7eabd5a5974f615e4439b33e92a3d2933971ff0df434af400b8b0d454"
   end
 
   depends_on "pkgconf" => :build

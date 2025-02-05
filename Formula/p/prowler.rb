@@ -3,17 +3,17 @@ class Prowler < Formula
 
   desc "Tool for cloud security assessments, audits, incident response, and more"
   homepage "https://prowler.com/"
-  url "https://files.pythonhosted.org/packages/d6/3b/bfb6826dc1f0d5f24db9a39bde8531bb9ab61c862571529dfc56ffb75404/prowler-5.2.1.tar.gz"
-  sha256 "fe35106c7fb53b7ccecc2f384caf2270ceefc36de7610e4dc63f5825384f1b86"
+  url "https://files.pythonhosted.org/packages/45/90/087b1225b7f87e34db62581fa0dbb5eb3e2473a3ee663c6dd20e4933163e/prowler-5.2.3.tar.gz"
+  sha256 "71cea94159282547b2ab77fcac884b6e017b75d82f847ec1284da83b563d3a98"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "4afd3addb926e82c05452f126e59d1e97d449498ad74a3fa3be7a17e41f8995a"
-    sha256 cellar: :any,                 arm64_sonoma:  "a9eea5a7e4dbcc164c3fc5b3ec7ba76ee73c7a7083c5d65afbac5bee80f8afd0"
-    sha256 cellar: :any,                 arm64_ventura: "4d23a754e6cf8eb725f8c9123d15aa6efff4e398c93332b0f9f069fb9cbd546e"
-    sha256 cellar: :any,                 sonoma:        "08c3a54401b189351842434bacff2e99fa3171f85a98492853e7346cfaa7d2a4"
-    sha256 cellar: :any,                 ventura:       "a2f96206d8b3bdcb505479767ee50decf165c2b5282b7b7a8ad61d8a71a3e136"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4fa0d843e9967000bbab928e22f0869fe176bee04bffde6f51fb6f0b2f1ba46f"
+    sha256 cellar: :any,                 arm64_sequoia: "ac81509414c9255e0b3fd0b745bf8a2b912b5788a6adf6e76b116391f3522ae4"
+    sha256 cellar: :any,                 arm64_sonoma:  "4a68390a9e102f39ba6d3278a1f9490f73d925ca2f393017dfbdc3c01a0b7015"
+    sha256 cellar: :any,                 arm64_ventura: "f02534fcd69c3209e885866e401b01d5573401ed856d004708145cec249629c0"
+    sha256 cellar: :any,                 sonoma:        "58a627c06f1f96a7b715ca11936052971c6f061f5803f6adc10688b14fc9d45e"
+    sha256 cellar: :any,                 ventura:       "798a974d00ab9082c6c77bd0016178956789d3265d7a95dbb82f2004b0cb8587"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "56fce5ad4a71ae4e3b813ef535490e1ef8b7fb033331d21318c8df771c4656dc"
   end
 
   depends_on "cmake" => :build
@@ -451,8 +451,8 @@ class Prowler < Formula
   end
 
   resource "msgraph-core" do
-    url "https://files.pythonhosted.org/packages/85/c8/2b06bdb135691102bdced91b5c715e37fbe153b19c11355f0b9158601c1a/msgraph_core-1.2.0.tar.gz"
-    sha256 "a4e42f692e664c60d63359e610bbf990f57b42d8080417261ff7042bbd59c98b"
+    url "https://files.pythonhosted.org/packages/b4/e6/48222b947cfd7f29ca14c0585d7e39615e6cd187a60da497d721b329d420/msgraph_core-1.2.1.tar.gz"
+    sha256 "87a3cb4d36dad590a3f02aaedf422547cbac10460bd9f0b6c984fab9556150d3"
   end
 
   resource "msgraph-sdk" do

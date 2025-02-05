@@ -3,17 +3,17 @@ class Bbot < Formula
 
   desc "OSINT automation tool"
   homepage "https://github.com/blacklanternsecurity/bbot"
-  url "https://files.pythonhosted.org/packages/97/19/c90ee1a2f492779689600225f39de6439c836f3e27ba6d22cb911f1572fa/bbot-2.3.1.tar.gz"
-  sha256 "b75a94bb0f53715e3ce436be22c9d2159ef148df945643d934394a474b8864d0"
+  url "https://files.pythonhosted.org/packages/64/01/f40bb2ad1bf4be92e873f06057e8e5b169a15444bd06a4c49fdb7171152f/bbot-2.3.2.tar.gz"
+  sha256 "7ed5bfb4df5299931346394d995117b57d87ccf87abef15c523f20d8be55bd91"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "42520cf37a0628620c7384aa05f914be3cbfa743211a125225adf962db51109d"
-    sha256 cellar: :any,                 arm64_sonoma:  "f6d3df301f510acab518dc812291ee5e4498832aa34dafa9f6dbea96ac9eefc0"
-    sha256 cellar: :any,                 arm64_ventura: "5a9ef3c48fdc57ebcf6ad9369b3162ca20e9fd52c36642699d03ff61b8d8de8e"
-    sha256 cellar: :any,                 sonoma:        "18303883e685a34e3f2d05d4450dc5364897767ea0126c2c9d79b6ce30fd38c4"
-    sha256 cellar: :any,                 ventura:       "60745a3e5c817b5a4d9c29c5cef497457429d3a961ac3573aab7511139e43903"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "868722d4d627ca5fabbfc2eaf75c87ec44eb13182859a96bf4da975eefb27f79"
+    sha256 cellar: :any,                 arm64_sequoia: "9c7fa99b99c3031387476071262e0c403a70290a26cb8692d9fc3cac89bb2294"
+    sha256 cellar: :any,                 arm64_sonoma:  "02bd99098c2aa59a6d4f3eb4f5cc9db2c5120a5b6da449ea2880de3c9618dde2"
+    sha256 cellar: :any,                 arm64_ventura: "36b925398bc75e49916f56eaab7cad77a2a9aeb326fe05314efcf8ab7f37ab53"
+    sha256 cellar: :any,                 sonoma:        "26b951045d385d23650ecb26b9bbdc3a4587e8c47a63234827d9cdc95ce9a010"
+    sha256 cellar: :any,                 ventura:       "b5f75dd759eb5293f0323218bd5bd2bd32ed90ee8996275d8d1185b859d66995"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08ecc4ab9fd8d3b90627b04f64da75f4d67d564acadc09b3f96aade46d96431f"
   end
 
   depends_on "cmake" => :build
@@ -212,8 +212,8 @@ class Bbot < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/fd/05/bed626b9f7bb2322cdbbf7b4bd8f54b1b617b0d2ab2d3547d6e39428a48e/pyzmq-26.2.0.tar.gz"
-    sha256 "070672c258581c8e4f640b5159297580a9974b026043bd4ab0470be9ed324f1f"
+    url "https://files.pythonhosted.org/packages/5a/e3/8d0382cb59feb111c252b54e8728257416a38ffcb2243c4e4775a3c990fe/pyzmq-26.2.1.tar.gz"
+    sha256 "17d72a74e5e9ff3829deb72897a175333d3ef5b5413948cae3cf7ebf0b02ecca"
   end
 
   resource "radixtarget" do
@@ -312,8 +312,8 @@ class Bbot < Formula
   end
 
   def install
-    # annotated_types > hatchling, fix to `ZIP does not support timestamps before 1980` error
-    ENV["SOURCE_DATE_EPOCH"] = Time.now.to_i.to_s
+    # The source doesn't have a valid SOURCE_DATE_EPOCH, so here we set default.
+    ENV["SOURCE_DATE_EPOCH"] = "1451574000"
 
     virtualenv_install_with_resources
   end
