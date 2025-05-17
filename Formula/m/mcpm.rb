@@ -3,18 +3,18 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/94/f1/0a218ec45d409d7de6784f746fb159b1a47fe8d4b5ac742bab7421a324f1/mcpm-1.10.0.tar.gz"
-  sha256 "53925f2c88b9ca67df7751c6fc9a6e1954dc235c3e1236fdbef24605205dad86"
+  url "https://files.pythonhosted.org/packages/35/07/cc64bc0a475a1124ac24f2d47ef7b768649d257ed5019a6b4eaa1ec9448f/mcpm-1.11.0.tar.gz"
+  sha256 "36602aa78318b74ef2aabcee9846497c2955cd8cbea7792ff43970aa6d80c5ce"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "7017317d7d5c0e0e009eb22579b4804eeb5def5737ef5b326c57c0b11557f61f"
-    sha256 cellar: :any,                 arm64_sonoma:  "75ad34c17e51d7d34c178242ffaaa890a4204404f49aa04cbc568f2e53435fc5"
-    sha256 cellar: :any,                 arm64_ventura: "5fa222701518b8b669bce7d50963bdcd60f0618e0b7a32e4ed3b40ca673dc074"
-    sha256 cellar: :any,                 sonoma:        "55833aaf33162c54bdc99f83e9ac273982dab37043610497ec2fb1239f73d13b"
-    sha256 cellar: :any,                 ventura:       "ec278cc90877e655b554db4056057fd119f271948c14ba52804be7f82aea6367"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "89f6fb299938ecd97505fac2a260ccbf4b01f2dfbb2e8cbfd5d2b2b02d148bae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7fc70519f0f577a4fb8630785f2769f7c5be3293a384f466ee565bfa04203180"
+    sha256 cellar: :any,                 arm64_sequoia: "4a925f01fc026294beababec36d62d5cbb0da5a64c97cbb0c51786ce74d33c96"
+    sha256 cellar: :any,                 arm64_sonoma:  "da0194e27d277cbe7a4ca8b592162158cfb28775854e20f86c669e79eeb7ed07"
+    sha256 cellar: :any,                 arm64_ventura: "ff1dfb5921bb386f159afc9c705b4ecde56318e8efa006526bffb42ba44e006b"
+    sha256 cellar: :any,                 sonoma:        "6e25651828a07c4f0769fd6bca633afd147757eac59a94dacf14b790be5b8254"
+    sha256 cellar: :any,                 ventura:       "eec9ad64c1f9ba56e27005409983f304b950249e6793fa07981f3d0f4c3c994a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "20241c8a7119195cce817ef5ed3fda56cf6b9b13ab275bff6dfeabd9d62a8de6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0bd46cd8940d0d230beced58f34289b5fd13bf84db542202846a6d0f5a854172"
   end
 
   depends_on "rust" => :build
@@ -81,8 +81,8 @@ class Mcpm < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/ff/97/0a3e08559557b0ac5799f9fb535fbe5a4e4dcdd66ce9d32e7a74b4d0534d/mcp-1.8.0.tar.gz"
-    sha256 "263dfb700540b726c093f0c3e043f66aded0730d0b51f04eb0a3eb90055fe49b"
+    url "https://files.pythonhosted.org/packages/95/d2/f587cb965a56e992634bebc8611c5b579af912b74e04eb9164bd49527d21/mcp-1.6.0.tar.gz"
+    sha256 "d9324876de2c5637369f43161cd71eebfd803df5a95e46225cab8d280e366723"
   end
 
   resource "mdurl" do
@@ -125,11 +125,6 @@ class Mcpm < Formula
     sha256 "41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5"
   end
 
-  resource "python-multipart" do
-    url "https://files.pythonhosted.org/packages/f3/87/f44d7c9f274c7ee665a29b885ec97089ec5dc034c7f3fafa03da9e39a09e/python_multipart-0.0.20.tar.gz"
-    sha256 "8dd0cab45b8e23064ae09147625994d090fa46f5b0d1e13af944c331a7fa9d13"
-  end
-
   resource "requests" do
     url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
     sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
@@ -151,8 +146,8 @@ class Mcpm < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/43/be/7e776a29b5f712b5bd13c571256a2470fcf345c562c7b2359f2ee15d9355/sse_starlette-2.3.4.tar.gz"
-    sha256 "0ffd6bed217cdbb74a84816437c609278003998b4991cd2e6872d0b35130e4d5"
+    url "https://files.pythonhosted.org/packages/10/5f/28f45b1ff14bee871bacafd0a97213f7ec70e389939a80c60c0fb72a9fc9/sse_starlette-2.3.5.tar.gz"
+    sha256 "228357b6e42dcc73a427990e2b4a03c023e2495ecee82e14f07ba15077e334b2"
   end
 
   resource "starlette" do
